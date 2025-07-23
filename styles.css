@@ -42,17 +42,6 @@
   --bg-secondary: #ffe6e6;
 }
 
-/* Dark Theme */
-[data-theme="dark"] {
-  --primary-color: #2c3e50;
-  --secondary-color: #34495e;
-  --accent-color: #3498db;
-  --dark-color: #1a1a1a;
-  --light-color: #2c2c2c;
-  --bg-color: #1a1a1a;
-  --bg-secondary: #2c2c2c;
-}
-
 [data-theme="ocean2"] {
   --primary-color: #007cf0;
   --secondary-color: #00dfd8;
