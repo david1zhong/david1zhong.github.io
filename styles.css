@@ -75,6 +75,68 @@ body {
   transition: background-color 0.3s ease;
 }
 
+/* Dark theme text colors */
+[data-theme="dark"] body {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .hero .subtitle {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .about-text p {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .project-info p {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .timeline-content h5 {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .timeline-content p {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .skill-name {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .more-card p {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .more-card ul li {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .section-title {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .timeline-content h4 {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .skill-category h4 {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .timeline-section h3,
+[data-theme="dark"] .skills-section h3 {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .more-card h3 {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .project-info h3 {
+  color: var(--text-color);
+}
+
 a {
   text-decoration: none;
   color: var(--dark-color);
@@ -131,6 +193,34 @@ header {
   box-shadow: var(--box-shadow);
   z-index: 1000;
   backdrop-filter: blur(10px);
+}
+
+/* Dark theme header */
+[data-theme="dark"] header {
+  background: var(--nav-gradient);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .logo {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .nav-links a {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .nav-links a:hover {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .burger div {
+  background-color: var(--text-color);
+}
+
+[data-theme="dark"] .theme-btn {
+  background-color: var(--light-color);
+  color: var(--text-color);
 }
 
 nav {
