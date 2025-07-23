@@ -50,6 +50,7 @@
   --nav-gradient: linear-gradient(45deg, #1e272e, #2f3640);
   --bg-color: #121212;
   --bg-secondary: #1e1e1e;
+  --color: #ffffff
 }
 
 * {
