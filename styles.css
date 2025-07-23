@@ -43,12 +43,13 @@
 }
 
 [data-theme="dark"] {
-  --bg-color: #0b0c2a;
-  --bg-secondary: #15173a;
-  --text-color: #e0e7ff;
-  --text-secondary: #a3b2cc;
-  --accent-color: #5468ff;
-  --card-color: #1b1e41;
+  --primary-color: #2b2b2b;
+  --secondary-color: #3a3a3a;
+  --accent-color: #7f8c8d;
+  --text-color: #ecf0f1;
+  --nav-gradient: linear-gradient(45deg, #1e272e, #2f3640);
+  --bg-color: #121212;
+  --bg-secondary: #1e1e1e;
 }
 
 * {
