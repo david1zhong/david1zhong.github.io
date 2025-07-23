@@ -42,7 +42,7 @@
   --bg-secondary: #ffe6e6;
 }
 
-[data-theme="ocean2"] {
+[data-theme="dark"] {
   --primary-color: #007cf0;
   --secondary-color: #00dfd8;
   --accent-color: #00c3ff;
