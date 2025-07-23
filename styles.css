@@ -17,11 +17,11 @@
 
 /* Ocean Theme */
 [data-theme="ocean"] {
-  --primary-color: #00b4db;
-  --secondary-color: #0083b0;
-  --accent-color: #00d4ff;
-  --bg-color: #f0f8ff;
-  --bg-secondary: #e6f3ff;
+  --primary-color: #007cf0;
+  --secondary-color: #00dfd8;
+  --accent-color: #00c3ff;
+  --bg-color: #f0faff;
+  --bg-secondary: #e6f7ff;
 }
 
 /* Forest Theme */
@@ -43,11 +43,12 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: #007cf0;
-  --secondary-color: #00dfd8;
-  --accent-color: #00c3ff;
-  --bg-color: #f0faff;
-  --bg-secondary: #e6f7ff;
+  --bg-color: #0b0c2a;
+  --bg-secondary: #15173a;
+  --text-color: #e0e7ff;
+  --text-secondary: #a3b2cc;
+  --accent-color: #5468ff;
+  --card-color: #1b1e41;
 }
 
 * {
