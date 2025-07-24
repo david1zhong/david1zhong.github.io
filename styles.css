@@ -17,11 +17,11 @@
 
 /* Ocean Theme */
 [data-theme="ocean"] {
-  --primary-color: #007cf0;
-  --secondary-color: #00dfd8;
-  --accent-color: #00c3ff;
-  --bg-color: #f0faff;
-  --bg-secondary: #e6f7ff;
+  --primary-color: #00b4db;
+  --secondary-color: #0083b0;
+  --accent-color: #00d4ff;
+  --bg-color: #f0f8ff;
+  --bg-secondary: #e6f3ff;
 }
 
 /* Forest Theme */
@@ -42,6 +42,7 @@
   --bg-secondary: #ffe6e6;
 }
 
+/* Dark Theme */
 [data-theme="dark"] {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
@@ -189,7 +190,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--nav-gradient);
+  background-color: rgba(255, 255, 255, 0.95);
   box-shadow: var(--box-shadow);
   z-index: 1000;
   backdrop-filter: blur(10px);
@@ -877,6 +878,97 @@ nav {
 
 .more-card ul li {
   margin-bottom: 8px;
+}
+
+.education-content {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.degree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.degree-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+  flex: 1;
+}
+
+.degree-year {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.degree-details {
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 10px;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--dark-color);
+  font-size: 0.9rem;
+  min-width: 110px;
+}
+
+.detail-value {
+  color: var(--dark-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.university-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding-top: 15px;
+  border-top: 1px solid var(--light-color);
+}
+
+/* Dark theme styles for education */
+[data-theme="dark"] .degree-title {
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .detail-label,
+[data-theme="dark"] .detail-value {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .university-name {
+  color: var(--primary-color);
+  border-top-color: var(--light-color);
+}
+
+/* Responsive adjustments for education */
+@media screen and (max-width: 480px) {
+  .degree-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .detail-label {
+    min-width: 90px;
+  }
 }
 
 /* Footer */
