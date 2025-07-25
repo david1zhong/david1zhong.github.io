@@ -271,6 +271,10 @@ nav {
   width: 100%;
 }
 
+.back-arrow {
+  margin-right: 16px;
+}
+
 .burger {
   display: none;
   cursor: pointer;
