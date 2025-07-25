@@ -226,20 +226,32 @@ header {
 
 nav {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 12px;
   padding: 20px 0;
   max-width: 1200px;
   margin: 0 auto;
   width: 90%;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--primary-color);
+.nav-left {
+  display: flex;
+  align-items: center;
 }
+
+.logo {
+  margin-left: 5vw;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.back-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 
 .nav-links {
   display: flex;
@@ -269,10 +281,6 @@ nav {
 
 .nav-links a:hover::after {
   width: 100%;
-}
-
-.back-arrow {
-  margin-right: 16px;
 }
 
 .burger {
