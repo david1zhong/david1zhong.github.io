@@ -1,4 +1,4 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,29 @@ l<!DOCTYPE html>
 </head>
 <body>
     <header>
-      <nav>
-        <div class="logo"><a href="https://david1zhong.github.io/personal-website1/">Projects</a></div>
-      </nav>
+        <nav>
+            <div class="logo"><a href="https://david1zhong.github.io/personal-website1/">Projects</a></div>
+            
+            <div class="nav-controls">
+  <div class="theme-toggle">
+    <button class="theme-btn" id="themeToggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m15.5-6.5l-4.24 4.24M7.76 16.24l-4.24 4.24M16.24 7.76l4.24-4.24M7.76 7.76L3.52 3.52"></path></svg>
+    </button>
+    <div class="color-picker" id="colorPicker">
+      <button class="color-btn" data-theme="default" style="background: linear-gradient(45deg, #6c63ff, #f50057)"></button>
+      <button class="color-btn" data-theme="ocean" style="background: linear-gradient(45deg, #00b4db, #0083b0)"></button>
+      <button class="color-btn" data-theme="forest" style="background: linear-gradient(45deg, #11998e, #38ef7d)"></button>
+      <button class="color-btn" data-theme="sunset" style="background: linear-gradient(45deg, #ff6b6b, #ffa500)"></button>
+      <button class="color-btn" data-theme="dark" style="background: linear-gradient(45deg, #2c3e50, #34495e)"></button>
+    </div>
+  </div>
+</div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
     </header>
 
     <section id="projects" class="projects section-padding">
@@ -32,11 +52,29 @@ l<!DOCTYPE html>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Project</a>
+                            <!--<a href="#" class="project-link">Source Code</a>-->
                         </div>
                     </div>
                 </div>
-
-
+                
+                <div class="project-card reveal">
+                    <div class="project-img">
+                        <img src="public/speed-and-red-light-camera-notifier.webp?height=600&width=800" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Speed & Red Light Camera Notifier</h3>
+                        <p>In-car device that fetches daily camera locations and uses GPS to track user’s position, alerting them via speaker when nearing speed or red light camera.</p>
+                        <div class="project-tags">
+                            <span>Raspberry Pi</span>
+                            <span>Python</span>
+                            <span>GeoJSON</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="project-card reveal">
                     <div class="project-img">
                         <img src="/placeholder.svg?height=600&width=800" alt="Project 3">
@@ -57,5 +95,8 @@ l<!DOCTYPE html>
             </div>
         </div>
     </section>
+    
+    
+    <script src="script.js"></script>
 </body>
 </html>
