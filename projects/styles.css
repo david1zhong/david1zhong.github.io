@@ -226,6 +226,7 @@ header {
 
 nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 0;
   max-width: 1200px;
@@ -233,25 +234,11 @@ nav {
   width: 90%;
 }
 
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
 .logo {
-  margin-left: 5vw;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
 }
-
-.back-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
 
 .nav-links {
   display: flex;
