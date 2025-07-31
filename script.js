@@ -139,22 +139,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const heroTitle = document.querySelector(".hero h1")
   if (heroTitle) {
-    const originalText = heroTitle.innerHTML
-    if (sessionStorage.getItem("visited") !== "true") {
-      sessionStorage.setItem("visited", "true")
-      heroTitle.innerHTML = ""
+    const nameSpan = heroTitle.querySelector(".highlight")
+    const name = nameSpan ? nameSpan.textContent : "David"
+    const beforeText = "Hello, I'm "
+    heroTitle.innerHTML = '<span class="typing-text"></span><span class="highlight"></span>'
+    const typingTextSpan = heroTitle.querySelector(".typing-text")
+    const highlightSpan = heroTitle.querySelector(".highlight")
+    setTimeout(() => {
+      let phase = 1
       let charIndex = 0
-      setTimeout(() => {
-        const typingInterval = setInterval(() => {
-          if (charIndex < originalText.length) {
-            heroTitle.innerHTML = originalText.substring(0, charIndex + 1)
+      const typingInterval = setInterval(() => {
+        if (phase === 1) {
+          if (charIndex < beforeText.length) {
+            typingTextSpan.textContent = beforeText.substring(0, charIndex + 1)
+            charIndex++
+          } else {
+            phase = 2
+            charIndex = 0
+          }
+        } else if (phase === 2) {
+          if (charIndex < name.length) {
+            highlightSpan.textContent = name.substring(0, charIndex + 1)
             charIndex++
           } else {
             clearInterval(typingInterval)
+            highlightSpan.style.borderRight = "2px solid var(--primary-color)"
+            highlightSpan.style.animation = "blink 1s infinite"
+            setTimeout(() => {
+              highlightSpan.style.borderRight = "none"
+              highlightSpan.style.animation = "none"
+            }, 2000)
           }
-        }, 50)
-      }, 500)
-    }
+        }
+      }, 100)
+    }, 1000)
   }
 
   const scrollIndicator = document.querySelector(".scroll-indicator")
