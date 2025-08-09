@@ -359,6 +359,19 @@ nav {
   transform: scale(1.1);
 }
 
+.visit-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  background-color: var(--bg-secondary);
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
 .hero {
   height: 100vh;
   display: flex;
@@ -399,6 +412,15 @@ nav {
   height: 8px;
   background-color: rgba(108, 99, 255, 0.3);
   z-index: -1;
+}
+
+.typing-text {
+  color: var(--dark-color);
+}
+
+/* Dark theme for typing text */
+[data-theme="dark"] .typing-text {
+  color: var(--text-color);
 }
 
 .cta-button {
@@ -1094,6 +1116,17 @@ footer {
   }
   60% {
     transform: translateY(-5px) rotate(45deg);
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    border-right-color: var(--primary-color);
+  }
+  51%,
+  100% {
+    border-right-color: transparent;
   }
 }
 
