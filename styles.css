@@ -76,7 +76,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Dark theme text colors */
 [data-theme="dark"] body {
   color: var(--text-color);
 }
@@ -184,7 +183,6 @@ img {
   border-radius: 2px;
 }
 
-/* Header & Navigation */
 header {
   position: fixed;
   top: 0;
@@ -196,7 +194,6 @@ header {
   backdrop-filter: blur(10px);
 }
 
-/* Dark theme header */
 [data-theme="dark"] header {
   background: var(--nav-gradient);
   backdrop-filter: blur(10px);
@@ -418,7 +415,6 @@ nav {
   color: var(--dark-color);
 }
 
-/* Dark theme for typing text */
 [data-theme="dark"] .typing-text {
   color: var(--text-color);
 }
@@ -496,7 +492,6 @@ nav {
   text-transform: uppercase;
 }
 
-/* About Section */
 .about {
   background-color: var(--bg-secondary);
 }
@@ -560,7 +555,6 @@ nav {
   transform: translateY(-5px);
 }
 
-/* Projects Section */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -643,7 +637,6 @@ nav {
   background-color: var(--secondary-color);
 }
 
-/* Experience Section */
 .experience-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -829,7 +822,6 @@ nav {
   transform: translateY(-2px);
 }
 
-/* Responsive adjustments for experience section */
 @media screen and (max-width: 768px) {
   .experience-container {
     grid-template-columns: 1fr;
@@ -849,7 +841,6 @@ nav {
   }
 }
 
-/* More Section */
 .more {
   background-color: var(--bg-secondary);
 }
@@ -965,7 +956,6 @@ nav {
   border-top: 1px solid var(--light-color);
 }
 
-/* Dark theme styles for education */
 [data-theme="dark"] .degree-title {
   color: var(--primary-color);
 }
@@ -980,7 +970,6 @@ nav {
   border-top-color: var(--light-color);
 }
 
-/* Responsive adjustments for education */
 @media screen and (max-width: 480px) {
   .degree-header {
     flex-direction: column;
@@ -993,7 +982,6 @@ nav {
   }
 }
 
-/* Footer */
 footer {
   background-color: var(--dark-color);
   color: white;
@@ -1039,15 +1027,7 @@ footer {
   background-color: var(--primary-color);
 }
 
-.copyright {
-  text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-}
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1130,7 +1110,6 @@ footer {
   }
 }
 
-/* Scroll Animations */
 .fade-in {
   opacity: 0;
 }
@@ -1146,7 +1125,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive Design */
 @media screen and (max-width: 1024px) {
   .nav-links {
     width: 60%;
