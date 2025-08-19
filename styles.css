@@ -1,6 +1,4 @@
-/* Base Styles */
 :root {
-  /* Default Theme */
   --primary-color: #6c63ff;
   --secondary-color: #f50057;
   --accent-color: #00d4ff;
@@ -15,7 +13,6 @@
   --border-radius: 8px;
 }
 
-/* Ocean Theme */
 [data-theme="ocean"] {
   --primary-color: #0866fa;
   --secondary-color: #0083b0;
@@ -24,7 +21,6 @@
   --bg-secondary: #e6f3ff;
 }
 
-/* Forest Theme */
 [data-theme="forest"] {
   --primary-color: #11998e;
   --secondary-color: #38ef7d;
@@ -33,7 +29,6 @@
   --bg-secondary: #e6ffe6;
 }
 
-/* Sunset Theme */
 [data-theme="sunset"] {
   --primary-color: #ff6b6b;
   --secondary-color: #ffa500;
@@ -42,7 +37,6 @@
   --bg-secondary: #ffe6e6;
 }
 
-/* Dark Theme */
 [data-theme="dark"] {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
