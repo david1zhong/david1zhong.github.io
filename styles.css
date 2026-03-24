@@ -8,6 +8,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: #000000;
   color: #ffffff;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 .header {
@@ -17,6 +22,9 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 65px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo img {
@@ -79,17 +87,32 @@ body {
 
 .main-layout {
   display: flex;
-  height: calc(100vh - 65px);
+  flex-direction: row;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1025px) {
+  .main-layout {
+    height: calc(100vh - 65px);
+  }
 }
 
 .sidebar {
   width: 160px;
+  min-width: 0;
   background-color: #242424;
   padding: 1rem 0;
-  overflow-y: auto;
   border-right: 1px solid #2a2f36;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1025px) {
+  .sidebar {
+    overflow-y: auto;
+  }
 }
 
 .sidebar::-webkit-scrollbar {
@@ -135,11 +158,18 @@ body {
 
 .content {
   flex: 1;
-  overflow-y: auto;
+  min-width: 0;
+  overflow-x: hidden;
   padding: 1.5rem;
   background-color: #000000;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+@media (min-width: 1025px) {
+  .content {
+    overflow-y: auto;
+  }
 }
 
 .content::-webkit-scrollbar {
@@ -148,12 +178,20 @@ body {
 
 .betslip {
   width: 360px;
+  min-width: 280px;
+  max-width: 360px;
+  flex-shrink: 1;
   background-color: #242830;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+@media (min-width: 1025px) {
+  .betslip {
+    overflow-y: auto;
+  }
 }
 
 .betslip::-webkit-scrollbar {
@@ -162,11 +200,16 @@ body {
 
 .betslip-content {
   flex: 1;
-  overflow-y: auto;
   padding: 0 1rem 1rem 1rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
   background-color: #1c1e1d;
+}
+
+@media (min-width: 1025px) {
+  .betslip-content {
+    overflow-y: auto;
+  }
 }
 
 .betslip-content::-webkit-scrollbar {
@@ -189,63 +232,39 @@ body {
   position: relative;
   overflow: hidden;
   flex: 1;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .carousel-track {
   display: flex;
   gap: 1rem;
   transition: transform 0.3s ease;
+  will-change: transform;
+  max-width: 100%;
 }
 
 .promo-card {
-  min-width: 400px;
-  height: 240px;
+  flex: 0 0 100%;
+  aspect-ratio: 985 / 509;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  flex-shrink: 0;
   user-select: none;
+  min-width: 0;
 }
 
-.promo-card.early-exit {
-  background: linear-gradient(135deg, #1a4d2e 0%, #2d6641 100%);
+@media (min-width: 900px) {
+  .promo-card {
+    flex: 0 0 calc((100% - 1rem) / 2);
+  }
 }
 
-.promo-card.profit-boost {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-}
-
-.promo-content {
-  padding: 1.25rem 1.5rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.promo-badge {
-  display: inline-block;
-  padding: 0.25rem 0.625rem;
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 3px;
-  font-size: 0.6875rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  font-style: italic;
-  letter-spacing: 0.5px;
-}
-
-.promo-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 0.25rem;
-}
-
-.promo-subtitle {
-  font-size: 0.875rem;
-  opacity: 0.95;
+@media (min-width: 1400px) {
+  .promo-card {
+    flex: 0 0 calc((100% - 2rem) / 3);
+  }
 }
 
 .promo-card img {
@@ -255,6 +274,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .card-overlay {
@@ -292,6 +312,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex-shrink: 0;
+  visibility: visible;
 }
 
 .carousel-arrow {
@@ -328,6 +350,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 2rem;
+  min-width: 0;
 }
 
 .section-header {
@@ -376,6 +399,7 @@ body {
   border-radius: 0 0 10px 10px;
   overflow: hidden;
   padding-bottom: 0.5rem;
+  min-width: 0;
 }
 
 .project-divider {
@@ -428,19 +452,28 @@ body {
 
 .game-matchup {
   padding: 1rem 1.5rem;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .game-teams {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-width: 0;
 }
 
 .team-row {
   display: grid;
-  grid-template-columns: 200px repeat(3, 1fr);
+  grid-template-columns: clamp(120px, 18vw, 200px) repeat(3, 1fr);
   gap: 1rem;
   align-items: stretch;
+  min-width: 0;
+}
+
+.team-row > * {
+  min-width: 0;
+  overflow: hidden;
 }
 
 .team {
@@ -448,6 +481,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-width: 0;
 }
 
 .team-logo {
@@ -464,11 +498,15 @@ body {
 .team-info {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .team-name {
   font-weight: 600;
   font-size: 0.9375rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .team-record {
@@ -488,6 +526,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .live-site-box .odds-spread {
@@ -537,9 +577,14 @@ body {
 
 .odds-header {
   display: grid;
-  grid-template-columns: 200px repeat(3, 1fr);
+  grid-template-columns: clamp(120px, 18vw, 200px) repeat(3, 1fr);
   gap: 1rem;
   padding: 0.75rem 1.5rem;
+  min-width: 0;
+}
+
+.odds-header > * {
+  min-width: 0;
 }
 
 .odds-label {
@@ -602,11 +647,6 @@ body {
   font-weight: bold;
 }
 
-.betslip-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
 .bet-legs {
   display: flex;
   flex-direction: column;
@@ -618,9 +658,6 @@ body {
 .bet-leg {
   position: relative;
   padding: 0.75rem 0;
-  border-left: none;
-  border-right: none;
-  border-top: none;
   border-bottom: 1px solid #2a2f36;
 }
 
@@ -886,63 +923,13 @@ body {
   text-transform: none;
 }
 
-@media (max-width: 1024px) {
-  .betslip {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
-}
-
-.odds-disclaimer-inline {
-  font-size: 0.72rem;
-  color: #8f9aa8;
-  margin-top: 0.125rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.live-site-box.disabled .date-range {
-  display: none;
-}
-
-@media (max-width: 1400px) {
-  .odds-disclaimer-inline {
-    white-space: normal;
-    font-size: 0.68rem;
-    line-height: 1.3;
-  }
-}
-
-@media (max-width: 960px) {
-  .odds-disclaimer-inline {
-    display: block;
-    white-space: normal;
-    font-size: 0.65rem;
-    line-height: 1.3;
-    color: #8f9aa8;
-    margin-top: 0.2rem;
-  }
-
-  .team-row::after {
-    content: none;
-  }
-
-  .date-range {
-    display: none;
-  }
-}
-
 .about-me-layout {
   display: flex;
   align-items: center;
   gap: 2rem;
   padding: 1.75rem 1.5rem;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .about-me-photo-wrapper {
@@ -964,10 +951,12 @@ body {
 
 .about-me-text-box {
   flex: 1;
+  min-width: 0;
   background-color: #1a1d23;
   border: 1px solid #2a2f36;
   border-radius: 8px;
   padding: 1.25rem 1.5rem;
+  overflow: hidden;
 }
 
 .about-me-name {
@@ -992,9 +981,52 @@ body {
   line-height: 1.7;
 }
 
-@media (max-width: 640px) {
-  .about-me-layout {
-    flex-direction: column;
-    text-align: center;
+.odds-disclaimer-inline {
+  font-size: 0.72rem;
+  color: #8f9aa8;
+  margin-top: 0.125rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.live-site-box.disabled .date-range {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .betslip {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .odds-disclaimer-inline {
+    white-space: normal;
+    font-size: 0.68rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 960px) {
+  .odds-disclaimer-inline {
+    display: block;
+    white-space: normal;
+    font-size: 0.65rem;
+    line-height: 1.3;
+    color: #8f9aa8;
+    margin-top: 0.2rem;
+  }
+  .team-row::after {
+    content: none;
+  }
+  .date-range {
+    display: none;
   }
 }
