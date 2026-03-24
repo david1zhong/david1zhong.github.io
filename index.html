@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Zhong Personal Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .content { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><a href="index.html"><img src="/images/logo.png" alt="Home"></a></div>
+    <nav class="nav">
+      <a href="#" onclick="navHome(event)">Home</a>
+      <a href="#" onclick="navProjects(event)">My Projects</a>
+      <a href="#" onclick="navExperiences(event)">Experiences</a>
+    </nav>
+    <div class="social-icons">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/davidzhong0" target="_blank" title="LinkedIn" class="icon-linkedin">
+        <svg viewBox="0 0 24 24" width="34" height="34" xmlns="http://www.w3.org/2000/svg">
+          <g transform="scale(0.8) translate(2.4,2.4)" fill="#fff">
+            <path d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z"/>
+          </g>
+        </svg>
+      </a>
+      <!-- Email -->
+      <a href="mailto:todavid198@gmail.com" title="Email">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm0 2l8 5 8-5V7l-8 5-8-5v1z" fill="#fff"/>
+        </svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/david1zhong" target="_blank" title="GitHub">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12a10 10 0 0 0 6.84 9.53c.5.1.68-.22.68-.48v-1.68c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1 1.53 1 .88 1.52 2.3 1.08 2.86.82.09-.64.35-1.08.63-1.33-2.22-.26-4.55-1.1-4.55-4.9 0-1.08.38-1.95 1-2.64-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1 .8-.22 1.65-.33 2.5-.33s1.7.11 2.5.33c1.9-1.27 2.74-1 2.74-1 .55 1.4.2 2.44.1 2.7.62.7 1 1.56 1 2.64 0 3.8-2.34 4.63-4.57 4.88.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z" fill="#fff"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="main-layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">QUALIFICATIONS</div>
+      <div class="sidebar-item"><span>Tech Support</span></div>
+      <div class="sidebar-item"><span>IT Student</span></div>
+      <div class="sidebar-item"><span>Automation</span></div>
+      <div class="sidebar-item"><span>Data Analytics</span></div>
+      <div class="sidebar-item"><span>Cloud Computing</span></div>
+      <div class="sidebar-item"><span>Full Stack Dev</span></div>
+
+      <br>
+
+      <div class="sidebar-title">LANGUAGES</div>
+      <div class="sidebar-item"><span>Python</span></div>
+      <div class="sidebar-item"><span>C</span></div>
+      <div class="sidebar-item"><span>SQL</span></div>
+      <div class="sidebar-item"><span>HTML/CSS</span></div>
+      <div class="sidebar-item"><span>JavaScript</span></div>
+      <div class="sidebar-item"><span>PHP</span></div>
+
+      <br>
+
+      <div class="sidebar-title">FRAMEWORKS</div>
+      <div class="sidebar-item"><span>React</span></div>
+      <div class="sidebar-item"><span>Node.js</span></div>
+      <div class="sidebar-item"><span>Flask</span></div>
+      <div class="sidebar-item"><span>AWS Lambda</span></div>
+      <div class="sidebar-item"><span>Pandas</span></div>
+      <div class="sidebar-item"><span>Tailwind CSS</span></div>
+    </aside>
+
+    <main class="content" id="mainContent">
+      <section class="promo-section">
+        <div class="carousel-container">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="promo-card">
+              <img src="/images/wnba.png" alt="Bet WNBA">
+              <div class="card-overlay" style="bottom: 1.5rem; left: 0.6rem;">
+                <a href="#project-wnba" class="card-btn card-btn-secondary" onclick="scrollToProject('project-wnba')">Details</a>
+                <a href="https://wnba-betting.streamlit.app/" target="_blank" class="card-btn card-btn-primary">View</a>
+              </div>
+            </div>
+
+            <div class="promo-card">
+              <img src="/images/bet-nfl.png" alt="Bet NFL">
+              <div class="card-overlay" style="bottom: 1.5rem; left: 2.7rem;">
+                <a href="#project-nfl" class="card-btn card-btn-secondary" onclick="scrollToProject('project-nfl')">Details</a>
+                <a href="https://bet-nfl.vercel.app" target="_blank" class="card-btn card-btn-primary">View</a>
+              </div>
+            </div>
+
+            <div class="promo-card">
+              <img src="/images/resume-promo.png" alt="Resume Promo">
+              <div class="card-overlay" style="bottom: 1.5rem; left: 4rem;">
+                <a href="#" class="card-btn card-btn-secondary" onclick="scrollToProject('about-me')">Details</a>
+                <a href="/public/Resume.pdf" target="_blank" class="card-btn card-btn-primary">View</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="carousel-arrows">
+          <button class="carousel-arrow" onclick="scrollCarousel(1)">◀</button>
+          <button class="carousel-arrow" onclick="scrollCarousel(-1)">▶</button>
+        </div>
+      </section>
+
+      <section class="nba-section" id="about-me" style="margin-bottom: 2rem;">
+        <div class="section-header">
+          <div class="section-title">
+            ABOUT ME
+          </div>
+        </div>
+        <div class="games-container-unified">
+          <div class="about-me-layout">
+            <div class="about-me-photo-wrapper">
+              <img
+                src="/images/me.webp"
+                alt="David Zhong"
+                class="about-me-photo"
+              />
+            </div>
+            <div class="about-me-text-box">
+              <div class="about-me-name">David Zhong</div>
+              <div class="about-me-subtitle">Computer Science + Business @ University of Guelph</div>
+              <p class="about-me-body">
+                Hi, I'm David! I'm a 2nd year CS co-op student at the University of Guelph, minoring in Business, and specializing in AI. I'm passionate about data analytics, web development, and automation.
+              </p>
+              <p class="about-me-body" style="margin-top: 0.75rem;">
+                I love watching and betting on NFL/NHL, playing chess, and building tools inspired by my hobbies. Feel free to reach out!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="nba-section" id="personal-projects">
+        <div class="section-header">
+          <div class="section-title">
+            <!--<div class="nba-icon">🏀</div>-->
+            PERSONAL PROJECTS
+          </div>
+        </div>
+
+        <div class="games-container-unified">
+
+          <!-- Project 1: WNBA -->
+          <div class="game-item" id="project-wnba">
+            <div class="game-header">
+              <div class="game-time">
+                <span class="sgp-badge">BETTING</span>
+                <span>AUG 2025</span>
+              </div>
+            </div>
+            <div class="odds-header">
+              <div></div>
+              <div class="odds-label">LIVE SITE</div>
+              <div class="odds-label">GITHUB REPO</div>
+              <div class="odds-label">VIDEO DEMO</div>
+            </div>
+            <div class="game-matchup">
+              <div class="game-teams">
+                <div class="team-row">
+                  <div class="team">
+                    <div class="team-logo"><svg width="50" height="50" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="b"><circle cx="50" cy="50" r="48"/></clipPath></defs><circle cx="50" cy="50" r="48" fill="#D28246"/><g clip-path="url(#b)"><rect x="47" y="0" width="6" height="100" fill="#13233C"/><rect x="0" y="47" width="100" height="6" fill="#13233C"/><circle cx="0" cy="50" r="30" fill="none" stroke="#13233C" stroke-width="6"/><circle cx="100" cy="50" r="30" fill="none" stroke="#13233C" stroke-width="6"/></g></svg></div>
+                    <div class="team-info">
+                      <div class="team-name">Health-Informed WNBA Betting</div>
+                    </div>
+                  </div>
+                  <a href="https://wnba-betting.streamlit.app/" target="_blank" class="odds-box live-site-box" data-disclaimer="*See demo if not in season">
+                    <div class="odds-spread">SEASONAL <span class="date-range">(MAY-SEP)</span></div>
+                    <div class="odds-price odds-disclaimer-inline">See demo if not in season</div>
+                  </a>
+                  <a href="https://github.com/david1zhong/WNBA-Betting" target="_blank" class="odds-box">
+                    <div class="odds-spread">GitHub</div>
+                    <div class="odds-price">Code + Write-Up</div>
+                  </a>
+                  <a class="odds-box lock-box">
+                    <svg class="lock-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" y="16" width="22" height="17" rx="1.5" ry="1.5" stroke="#b0b8c8" stroke-width="1.45" fill="none"/>
+                      <path d="M12 16V12.5a6 6 0 0 1 12 0v3.5" stroke="#b0b8c8" stroke-width="1.45" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="18" cy="23" r="2.2" stroke="#b0b8c8" stroke-width="1.45" fill="none"/>
+                      <rect x="17.1" y="24.8" width="1.8" height="3.2" rx="0.9" fill="#b0b8c8"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="more-bets-link"><a href="#" class="more-bets">More Bets →</a></div>
+          </div>
+
+          <hr class="project-divider">
+
+          <!-- Project 2: NFL -->
+          <div class="game-item" id="project-nfl">
+            <div class="game-header">
+              <div class="game-time">
+                <span class="sgp-badge">BETTING</span>
+                <span>JUL 2025</span>
+              </div>
+            </div>
+            <div class="game-matchup">
+              <div class="game-teams">
+                <div class="team-row">
+                  <div class="team">
+                    <div class="team-logo"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/National_Football_League_logo.svg/960px-National_Football_League_logo.svg.png" height="30px" width="22px" alt="NFL Logo"></div>
+                    <div class="team-info">
+                      <div class="team-name">Bet NFL</div>
+                    </div>
+                  </div>
+                  <a href="https://bet-nfl.vercel.app" target="_blank" class="odds-box live-site-box" data-disclaimer="*See demo if not in season">
+                    <div class="odds-spread">SEASONAL <span class="date-range">(OCT-FEB)</span></div>
+                    <div class="odds-price odds-disclaimer-inline">See demo if not in season</div>
+                  </a>
+                  <a href="https://github.com/david1zhong/Bet-NFL" target="_blank" class="odds-box">
+                    <div class="odds-spread">GitHub</div>
+                    <div class="odds-price">Code + Write-Up</div>
+                  </a>
+                  <a class="odds-box lock-box">
+                    <svg class="lock-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" y="16" width="22" height="17" rx="1.5" ry="1.5" stroke="#b0b8c8" stroke-width="1.45" fill="none"/>
+                      <path d="M12 16V12.5a6 6 0 0 1 12 0v3.5" stroke="#b0b8c8" stroke-width="1.45" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="18" cy="23" r="2.2" stroke="#b0b8c8" stroke-width="1.45" fill="none"/>
+                      <rect x="17.1" y="24.8" width="1.8" height="3.2" rx="0.9" fill="#b0b8c8"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="more-bets-link"><a href="#" class="more-bets">More Bets →</a></div>
+          </div>
+
+          <hr class="project-divider">
+
+          <!-- Project 3: Hardware -->
+          <div class="game-item" id="project-hardware">
+            <div class="game-header">
+              <div class="game-time">
+                <span class="sgp-badge">HARDWARE</span>
+                <span>JUN 2025</span>
+              </div>
+            </div>
+            <div class="game-matchup">
+              <div class="game-teams">
+                <div class="team-row">
+                  <div class="team">
+                    <div class="team-logo"><img src="/images/speed-camera.png" height="30px" width="34px" alt="Camera Logo"></div>
+                    <div class="team-info">
+                      <div class="team-name">Traffic Speed & Camera Alert Device</div>
+                    </div>
+                  </div>
+                  <a class="odds-box live-site-box disabled" data-disclaimer="*See demo for details">
+                    <div class="odds-spread">RETIRED<span class="date-range"> (JUN–NOV 2025)</span></div>
+                    <div class="odds-price odds-disclaimer-inline">Provincial ban, see demo</div>
+                  </a>
+                  <a href="https://github.com/david1zhong/detect_ase" target="_blank" class="odds-box">
+                    <div class="odds-spread">GitHub</div>
+                    <div class="odds-price">Code + Write-Up</div>
+                  </a>
+                  <a href="https://youtube.com/yourvideo" target="_blank" class="odds-box">
+                    <div class="odds-spread">YouTube</div>
+                    <div class="odds-price">05:45</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="more-bets-link"><a href="#" class="more-bets">More Bets →</a></div>
+          </div>
+
+          <hr class="project-divider">
+
+          <!-- Project 4: NHL -->
+          <div class="game-item" id="project-nhl">
+            <div class="game-header">
+              <div class="game-time">
+                <span class="sgp-badge">BETTING</span>
+                <span>MAY 2025</span>
+              </div>
+            </div>
+            <div class="game-matchup">
+              <div class="game-teams">
+                <div class="team-row">
+                  <div class="team">
+                    <div class="team-logo"><img src="https://upload.wikimedia.org/wikipedia/sco/thumb/3/3a/05_NHL_Shield.svg/1280px-05_NHL_Shield.svg.png" height="30px" width="26px" alt="NHL Logo"></div>
+                    <div class="team-info">
+                      <div class="team-name">Bet NHL</div>
+                    </div>
+                  </div>
+                  <a href="https://bet-nhl-demo.vercel.app/" target="_blank" class="odds-box live-site-box" data-disclaimer="*See demo if not in season">
+                    <div class="odds-spread">SEASONAL <span class="date-range">(OCT-JUN)</span></div>
+                    <div class="odds-price odds-disclaimer-inline">See demo if not in season</div>
+                  </a>
+                  <a href="https://github.com/david1zhong/bet_nhl_demo" target="_blank" class="odds-box">
+                    <div class="odds-spread">GitHub</div>
+                    <div class="odds-price">Code + Write-Up</div>
+                  </a>
+                  <a class="odds-box lock-box">
+                    <svg class="lock-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" y="16" width="22" height="17" rx="1.5" ry="1.5" stroke="#b0b8c8" stroke-width="1.45" fill="none"/>
+                      <path d="M12 16V12.5a6 6 0 0 1 12 0v3.5" stroke="#b0b8c8" stroke-width="1.45" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="18" cy="23" r="2.2" stroke="#b0b8c8" stroke-width="1.45" fill="none"/>
+                      <rect x="17.1" y="24.8" width="1.8" height="3.2" rx="0.9" fill="#b0b8c8"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="more-bets-link"><a href="#" class="more-bets">More Bets →</a></div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <aside class="betslip" id="experiences">
+      <div class="betslip-header">
+        <div class="betslip-badge">3</div>
+        <div class="betslip-title">Work Experience</div>
+      </div>
+
+      <div class="betslip-content">
+        <div class="bet-legs" id="betLegs">
+          <div class="bet-leg" data-odds="-113">
+            <div class="bet-leg-top-row">
+              <div class="bet-leg-header">uWaterloo WAT.ai ML Engineer</div>
+              <span class="bet-leg-odds-inline">-113</span>
+            </div>
+            <div class="bet-leg-type-row">
+              <div class="bet-leg-type">Flock RL (Drone Swarm Obstacle Navigation)</div>
+              <span class="cash-out-badge">CURRENT</span>
+            </div>
+            <div class="bet-leg-detail">Built LiDAR ray generation and vectorized multi-ray distance calculations for drone perception systems while implementing and evaluating reinforcement learning algorithms (DDPG and TD3), focusing on learning stability, critic bias, and performance improvements.</div>
+          </div>
+
+          <div class="bet-leg" data-odds="-140">
+            <div class="bet-leg-top-row">
+              <div class="bet-leg-header">Full Stack Developer, Co-op</div>
+              <span class="bet-leg-odds-inline">-140</span>
+            </div>
+            <div class="bet-leg-type-row">
+              <div class="bet-leg-type">DigitalFire.ca</div>
+              <span class="cash-out-badge">07/23 - 08/23</span>
+            </div>
+            <div class="bet-leg-detail">Automated a 200+ item inventory database using Python and Google API, built a frontend with HTML, CSS, PHP, and JavaScript, managed IT equipment for small businesses, and handled front desk communications and package reception.</div>
+          </div>
+
+          <div class="bet-leg" data-odds="-110">
+            <div class="bet-leg-top-row">
+              <div class="bet-leg-header">Believe Leadership Chapter Leader</div>
+              <span class="bet-leg-odds-inline">-110</span>
+            </div>
+            <div class="bet-leg-type-row">
+              <div class="bet-leg-type">Glen Abbey Chapter</div>
+              <span class="cash-out-badge">03/22 - 06/23</span>
+            </div>
+            <div class="bet-leg-detail">Provided 1-on-1 mentorship for member projects, including a North American finalist submission, while organizing end-of-term showcases and delivering lessons on communication, discipline, and related skills.</div>
+          </div>
+        </div>
+
+        <div class="straight-bets-section">
+          <div class="straight-bets-header">
+            <div class="straight-bets-title">
+              Straight bets
+              <div class="info-icon">i</div>
+            </div>
+            <div class="expand-icon">⌄</div>
+          </div>
+        </div>
+
+        <hr style="border: 1px solid #1e90ff;">
+
+        <div class="parlay-info">
+          <div class="parlay-header">
+            <div class="parlay-title">3 leg Parlay</div>
+            <div class="cash-out-badge">CASH OUT</div>
+          </div>
+          <div class="parlay-odds">+516</div>
+        </div>
+
+        <div class="wager-section">
+          <div class="wager-input">
+            <div class="wager-label">Wager</div>
+            <div class="wager-value">
+              <input type="text" value="$" id="wagerInput" oninput="calculatePayout()">
+            </div>
+          </div>
+          <div class="wager-input">
+            <div class="wager-label">To Win</div>
+            <div class="wager-value" id="toWin">$</div>
+          </div>
+        </div>
+
+        <hr style="border: none; height: 1px; background-color: #3a3c3b;">
+
+        <div class="round-robin-section">
+          <a href="#" class="round-robin-link">
+            <span>Round Robin</span>
+            <span>›</span>
+          </a>
+        </div>
+
+        <hr style="border: none; height: 1px; background-color: #3a3c3b;">
+
+        <div class="odds-movement-section">
+          <div class="odds-movement-label">
+            Accept odds movements
+            <div class="info-icon">i</div>
+          </div>
+          <div class="toggle-switch"></div>
+        </div>
+
+        <hr style="border: none; height: 1px; background-color: #3a3c3b;">
+      </div>
+
+      <div class="betslip-footer">
+        <button class="bet-button">Log in or join to bet</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
